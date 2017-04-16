@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace OIDC-PoC.Models.ManageViewModels
+namespace OIDC_PoC.Models.ManageViewModels
 {
     public class ManageLoginsViewModel
     {

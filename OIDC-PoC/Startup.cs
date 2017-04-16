@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using OIDC-PoC.Data;
-using OIDC-PoC.Models;
-using OIDC-PoC.Services;
+using OIDC_PoC.Data;
+using OIDC_PoC.Models;
+using OIDC_PoC.Services;
 
-namespace OIDC-PoC
+namespace OIDC_PoC
 {
     public class Startup
     {

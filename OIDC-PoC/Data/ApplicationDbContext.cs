@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using OIDC-PoC.Models;
+using OIDC_PoC.Models;
 
-namespace OIDC-PoC.Data
+namespace OIDC_PoC.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

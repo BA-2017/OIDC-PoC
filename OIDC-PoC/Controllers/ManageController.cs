@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using OIDC-PoC.Models;
-using OIDC-PoC.Models.ManageViewModels;
-using OIDC-PoC.Services;
+using OIDC_PoC.Models;
+using OIDC_PoC.Models.ManageViewModels;
+using OIDC_PoC.Services;
 
-namespace OIDC-PoC.Controllers
+namespace OIDC_PoC.Controllers
 {
     [Authorize]
     public class ManageController : Controller

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace OIDC-PoC.Models.AccountViewModels
+namespace OIDC_PoC.Models.AccountViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {
