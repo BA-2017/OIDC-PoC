@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using OIDC_PoC.Data;
 using OIDC_PoC.Models;
 using OIDC_PoC.Services;
@@ -76,6 +77,14 @@ namespace OIDC_PoC
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
+            app.UseOpenIdConnectAuthentication(new OpenIdConnectOptions
+            {
+                ClientId = Configuration["OpenIdConnect:ClientId"],
+                ClientSecret = Configuration["ClientSecret"],
+                Authority = Configuration["OpenIdConnect:Authority"],
+                ResponseType = OpenIdConnectResponseType.CodeIdToken,
+                PostLogoutRedirectUri = Configuration["PostLogoutRedirectUri"]
+            });
 
             app.UseMvc(routes =>
             {
