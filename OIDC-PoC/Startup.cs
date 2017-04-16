@@ -82,7 +82,7 @@ namespace OIDC_PoC
                 ClientId = Configuration["OpenIdConnect:ClientId"],
                 ClientSecret = Configuration["ClientSecret"],
                 Authority = Configuration["OpenIdConnect:Authority"],
-                ResponseType = OpenIdConnectResponseType.CodeIdToken,
+                ResponseType = OpenIdConnectResponseType.Code,
                 PostLogoutRedirectUri = Configuration["PostLogoutRedirectUri"]
             });
 
