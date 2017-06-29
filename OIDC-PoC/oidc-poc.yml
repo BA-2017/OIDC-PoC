@@ -19,10 +19,17 @@ spec:
     spec:
       containers:
       - name: oidc-poc
-        image: ba2017/oidc-poc:v0.1
+        image: ba2017/oidc-poc:v0.2
         env:
         - name: ASPNETCORE_URLS
           value: "http://*:9000"
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Development"
+        - name: ClientSecret
+          valueFrom:
+            secretKeyRef:
+              name: adfs-clientsecret
+              key: clientsecret
         ports:
         - containerPort: 9000
 ---
