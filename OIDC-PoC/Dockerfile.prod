@@ -1,0 +1,5 @@
+FROM microsoft/aspnetcore:1.1.2
+WORKDIR /app
+COPY ./PublishOutput .
+ENV ASPNETCORE_URLS http://*:9000
+ENTRYPOINT ["dotnet", "OIDC-PoC.dll"]
